@@ -1,0 +1,17 @@
+<form action="" method="post" name="form_contest" id="form_contest">
+{% csrf_token %}
+<label for="{{ form.contest_name.id_for_label }}">Name</label>
+{{ form.contest_name }}
+{{ form.contest_name.errors}}
+<br/>
+<label for="{{ form.points.id_for_label }}">Points</label>
+{{ form.points }}
+{{ form.points.errors}}
+<br/>
+<label for="{{ form.description.id_for_label }}">description</label>
+{{ form.description }}
+{{ form.description.errors}}
+<input type="submit" name="submit" value="Submit" placeholder="">
+<br/>
+{{ mode }}
+</form>
